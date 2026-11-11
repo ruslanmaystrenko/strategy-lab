@@ -1,0 +1,41 @@
+{
+ "crossovers_scored": 4663,
+ "skill_trade_made_money": 0.495395343871319,
+ "skill_up_3_in_10_days": 0.5288080784974398,
+ "skill_with_scrambled_answers": 0.46791563938247116,
+ "years_above_coin_flip": 11,
+ "years_tested": 17,
+ "groups": [
+  {
+   "group": "picked by the model",
+   "crossovers": 1475,
+   "share that made money": 0.3749152542,
+   "average trade": 0.1586376957,
+   "typical trade": -0.0594713463,
+   "average next 10 days": 0.0024694265
+  },
+  {
+   "group": "skipped by the model",
+   "crossovers": 3188,
+   "share that made money": 0.3698243413,
+   "average trade": 0.1389364451,
+   "typical trade": -0.043956592,
+   "average next 10 days": 0.0037027762
+  },
+  {
+   "group": "all crossovers",
+   "crossovers": 4663,
+   "share that made money": 0.3714346987,
+   "average trade": 0.145168344,
+   "typical trade": -0.0470065547,
+   "average next 10 days": 0.0033124757
+  }
+ ],
+ "top_inputs": [
+  "price_vs_ema200",
+  "ema50_slope",
+  "macd_gap",
+  "below_year_high",
+  "momentum_63"
+ ]
+}
