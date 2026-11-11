@@ -1,0 +1,479 @@
+{
+ "data": {
+  "symbols_wanted": 990,
+  "symbols_found": 613,
+  "first_day": "2003-01-02",
+  "last_day": "2026-11-10",
+  "has_membership_history": true,
+  "symbols_missing": 377
+ },
+ "stocks_tested": 590,
+ "by_cost": {
+  "no cost": {
+   "per_stock": {
+    "stocks": 590,
+    "share_where_strategy_beat_holding": 0.19152542372881357,
+    "median_yearly_return": {
+     "strategy": 0.04681265440124949,
+     "hold": 0.09746224440616647
+    },
+    "median_worst_drop": {
+     "strategy": -0.484716857720507,
+     "hold": -0.617489134637419
+    },
+    "median_share_of_days_invested": 0.650394572048191
+   },
+   "trades": {
+    "count": 5664,
+    "share_profitable": 0.3774717514124294,
+    "average_result": 0.14368646993951303,
+    "median_result": -0.04407370514909936,
+    "average_winner": 0.545565879573005,
+    "average_loser": -0.09999423845424926,
+    "median_days_held": 190.0
+   },
+   "portfolio": {
+    "strategy": {
+     "total_return": 4.0231,
+     "yearly_return": 0.0768,
+     "worst_drop": -0.2554,
+     "yearly_swing": 0.1035,
+     "days": 5499
+    },
+    "hold_all_members": {
+     "total_return": 14.8716,
+     "yearly_return": 0.1351,
+     "worst_drop": -0.5689,
+     "yearly_swing": 0.2056,
+     "days": 5499
+    },
+    "spy": {
+     "total_return": 8.2176,
+     "yearly_return": 0.1071,
+     "worst_drop": -0.5519,
+     "yearly_swing": 0.1888,
+     "days": 5499
+    }
+   },
+   "portfolio_by_era": {
+    "2005 to 2009": {
+     "strategy": {
+      "total_return": 0.186,
+      "yearly_return": 0.0347,
+      "worst_drop": -0.159,
+      "yearly_swing": 0.0785,
+      "days": 1259
+     },
+     "hold_all_members": {
+      "total_return": 0.2629,
+      "yearly_return": 0.0478,
+      "worst_drop": -0.5689,
+      "yearly_swing": 0.2748,
+      "days": 1259
+     },
+     "spy": {
+      "total_return": 0.0197,
+      "yearly_return": 0.0039,
+      "worst_drop": -0.5519,
+      "yearly_swing": 0.2401,
+      "days": 1259
+     }
+    },
+    "2010 to 2019": {
+     "strategy": {
+      "total_return": 1.4817,
+      "yearly_return": 0.0953,
+      "worst_drop": -0.1463,
+      "yearly_swing": 0.1057,
+      "days": 2516
+     },
+     "hold_all_members": {
+      "total_return": 3.0966,
+      "yearly_return": 0.1517,
+      "worst_drop": -0.2218,
+      "yearly_swing": 0.1569,
+      "days": 2516
+     },
+     "spy": {
+      "total_return": 2.5276,
+      "yearly_return": 0.1346,
+      "worst_drop": -0.1935,
+      "yearly_swing": 0.147,
+      "days": 2516
+     }
+    },
+    "2020 to now": {
+     "strategy": {
+      "total_return": 0.7067,
+      "yearly_return": 0.0813,
+      "worst_drop": -0.2554,
+      "yearly_swing": 0.1157,
+      "days": 1724
+     },
+     "hold_all_members": {
+      "total_return": 2.0679,
+      "yearly_return": 0.178,
+      "worst_drop": -0.3834,
+      "yearly_swing": 0.2092,
+      "days": 1724
+     },
+     "spy": {
+      "total_return": 1.5625,
+      "yearly_return": 0.1475,
+      "worst_drop": -0.3372,
+      "yearly_swing": 0.2002,
+      "days": 1724
+     }
+    }
+   }
+  },
+  "0.05% per trade": {
+   "per_stock": {
+    "stocks": 590,
+    "share_where_strategy_beat_holding": 0.188135593220339,
+    "median_yearly_return": {
+     "strategy": 0.046098906060788036,
+     "hold": 0.09746224440616647
+    },
+    "median_worst_drop": {
+     "strategy": -0.48662198120808275,
+     "hold": -0.617489134637419
+    },
+    "median_share_of_days_invested": 0.650394572048191
+   },
+   "trades": {
+    "count": 5664,
+    "share_profitable": 0.3765889830508475,
+    "average_result": 0.14254306939119113,
+    "median_result": -0.04502939246237647,
+    "average_winner": 0.5452973581215131,
+    "average_loser": -0.10075200222075363,
+    "median_days_held": 190.0
+   },
+   "portfolio": {
+    "strategy": {
+     "total_return": 3.9483,
+     "yearly_return": 0.076,
+     "worst_drop": -0.2555,
+     "yearly_swing": 0.1035,
+     "days": 5499
+    },
+    "hold_all_members": {
+     "total_return": 14.8716,
+     "yearly_return": 0.1351,
+     "worst_drop": -0.5689,
+     "yearly_swing": 0.2056,
+     "days": 5499
+    },
+    "spy": {
+     "total_return": 8.2176,
+     "yearly_return": 0.1071,
+     "worst_drop": -0.5519,
+     "yearly_swing": 0.1888,
+     "days": 5499
+    }
+   },
+   "portfolio_by_era": {
+    "2005 to 2009": {
+     "strategy": {
+      "total_return": 0.1822,
+      "yearly_return": 0.0341,
+      "worst_drop": -0.1601,
+      "yearly_swing": 0.0785,
+      "days": 1259
+     },
+     "hold_all_members": {
+      "total_return": 0.2629,
+      "yearly_return": 0.0478,
+      "worst_drop": -0.5689,
+      "yearly_swing": 0.2748,
+      "days": 1259
+     },
+     "spy": {
+      "total_return": 0.0197,
+      "yearly_return": 0.0039,
+      "worst_drop": -0.5519,
+      "yearly_swing": 0.2401,
+      "days": 1259
+     }
+    },
+    "2010 to 2019": {
+     "strategy": {
+      "total_return": 1.4656,
+      "yearly_return": 0.0946,
+      "worst_drop": -0.1464,
+      "yearly_swing": 0.1057,
+      "days": 2516
+     },
+     "hold_all_members": {
+      "total_return": 3.0966,
+      "yearly_return": 0.1517,
+      "worst_drop": -0.2218,
+      "yearly_swing": 0.1569,
+      "days": 2516
+     },
+     "spy": {
+      "total_return": 2.5276,
+      "yearly_return": 0.1346,
+      "worst_drop": -0.1935,
+      "yearly_swing": 0.147,
+      "days": 2516
+     }
+    },
+    "2020 to now": {
+     "strategy": {
+      "total_return": 0.6977,
+      "yearly_return": 0.0804,
+      "worst_drop": -0.2555,
+      "yearly_swing": 0.1157,
+      "days": 1724
+     },
+     "hold_all_members": {
+      "total_return": 2.0679,
+      "yearly_return": 0.178,
+      "worst_drop": -0.3834,
+      "yearly_swing": 0.2092,
+      "days": 1724
+     },
+     "spy": {
+      "total_return": 1.5625,
+      "yearly_return": 0.1475,
+      "worst_drop": -0.3372,
+      "yearly_swing": 0.2002,
+      "days": 1724
+     }
+    }
+   },
+   "portfolio_by_year": {
+    "2005": {
+     "strategy": 0.0328,
+     "hold_all_members": 0.1046,
+     "spy": 0.0483
+    },
+    "2006": {
+     "strategy": 0.0732,
+     "hold_all_members": 0.1717,
+     "spy": 0.1585
+    },
+    "2007": {
+     "strategy": 0.0553,
+     "hold_all_members": 0.0232,
+     "spy": 0.0515
+    },
+    "2008": {
+     "strategy": -0.115,
+     "hold_all_members": -0.3523,
+     "spy": -0.368
+    },
+    "2009": {
+     "strategy": 0.142,
+     "hold_all_members": 0.4724,
+     "spy": 0.2635
+    },
+    "2010": {
+     "strategy": 0.1285,
+     "hold_all_members": 0.2201,
+     "spy": 0.1506
+    },
+    "2011": {
+     "strategy": -0.0004,
+     "hold_all_members": 0.0165,
+     "spy": 0.0189
+    },
+    "2012": {
+     "strategy": 0.0705,
+     "hold_all_members": 0.1931,
+     "spy": 0.1599
+    },
+    "2013": {
+     "strategy": 0.3111,
+     "hold_all_members": 0.3712,
+     "spy": 0.3231
+    },
+    "2014": {
+     "strategy": 0.1178,
+     "hold_all_members": 0.151,
+     "spy": 0.1346
+    },
+    "2015": {
+     "strategy": 0.0076,
+     "hold_all_members": -0.0131,
+     "spy": 0.0123
+    },
+    "2016": {
+     "strategy": 0.0492,
+     "hold_all_members": 0.1653,
+     "spy": 0.12
+    },
+    "2017": {
+     "strategy": 0.1688,
+     "hold_all_members": 0.2087,
+     "spy": 0.2171
+    },
+    "2018": {
+     "strategy": -0.0251,
+     "hold_all_members": -0.0674,
+     "spy": -0.0457
+    },
+    "2019": {
+     "strategy": 0.1564,
+     "hold_all_members": 0.3534,
+     "spy": 0.3122
+    },
+    "2020": {
+     "strategy": 0.0013,
+     "hold_all_members": 0.2367,
+     "spy": 0.1833
+    },
+    "2021": {
+     "strategy": 0.2781,
+     "hold_all_members": 0.3243,
+     "spy": 0.2873
+    },
+    "2022": {
+     "strategy": -0.0908,
+     "hold_all_members": -0.1027,
+     "spy": -0.1818
+    },
+    "2023": {
+     "strategy": 0.0667,
+     "hold_all_members": 0.2338,
+     "spy": 0.2618
+    },
+    "2024": {
+     "strategy": 0.1625,
+     "hold_all_members": 0.2095,
+     "spy": 0.2489
+    },
+    "2025": {
+     "strategy": 0.0752,
+     "hold_all_members": 0.1727,
+     "spy": 0.1772
+    },
+    "2026": {
+     "strategy": 0.0943,
+     "hold_all_members": 0.193,
+     "spy": 0.1083
+    }
+   }
+  },
+  "0.20% per trade": {
+   "per_stock": {
+    "stocks": 590,
+    "share_where_strategy_beat_holding": 0.1711864406779661,
+    "median_yearly_return": {
+     "strategy": 0.04389590985623115,
+     "hold": 0.09746224440616647
+    },
+    "median_worst_drop": {
+     "strategy": -0.4921157613607448,
+     "hold": -0.617489134637419
+    },
+    "median_share_of_days_invested": 0.650394572048191
+   },
+   "trades": {
+    "count": 5664,
+    "share_profitable": 0.372704802259887,
+    "average_result": 0.13911629880563472,
+    "median_result": -0.04789358662332355,
+    "average_winner": 0.5463125956996184,
+    "average_loser": -0.10281766762926524,
+    "median_days_held": 190.0
+   },
+   "portfolio": {
+    "strategy": {
+     "total_return": 3.7305,
+     "yearly_return": 0.0738,
+     "worst_drop": -0.2561,
+     "yearly_swing": 0.1035,
+     "days": 5499
+    },
+    "hold_all_members": {
+     "total_return": 14.8716,
+     "yearly_return": 0.1351,
+     "worst_drop": -0.5689,
+     "yearly_swing": 0.2056,
+     "days": 5499
+    },
+    "spy": {
+     "total_return": 8.2176,
+     "yearly_return": 0.1071,
+     "worst_drop": -0.5519,
+     "yearly_swing": 0.1888,
+     "days": 5499
+    }
+   },
+   "portfolio_by_era": {
+    "2005 to 2009": {
+     "strategy": {
+      "total_return": 0.1707,
+      "yearly_return": 0.032,
+      "worst_drop": -0.1635,
+      "yearly_swing": 0.0785,
+      "days": 1259
+     },
+     "hold_all_members": {
+      "total_return": 0.2629,
+      "yearly_return": 0.0478,
+      "worst_drop": -0.5689,
+      "yearly_swing": 0.2748,
+      "days": 1259
+     },
+     "spy": {
+      "total_return": 0.0197,
+      "yearly_return": 0.0039,
+      "worst_drop": -0.5519,
+      "yearly_swing": 0.2401,
+      "days": 1259
+     }
+    },
+    "2010 to 2019": {
+     "strategy": {
+      "total_return": 1.4179,
+      "yearly_return": 0.0925,
+      "worst_drop": -0.1469,
+      "yearly_swing": 0.1057,
+      "days": 2516
+     },
+     "hold_all_members": {
+      "total_return": 3.0966,
+      "yearly_return": 0.1517,
+      "worst_drop": -0.2218,
+      "yearly_swing": 0.1569,
+      "days": 2516
+     },
+     "spy": {
+      "total_return": 2.5276,
+      "yearly_return": 0.1346,
+      "worst_drop": -0.1935,
+      "yearly_swing": 0.147,
+      "days": 2516
+     }
+    },
+    "2020 to now": {
+     "strategy": {
+      "total_return": 0.6712,
+      "yearly_return": 0.078,
+      "worst_drop": -0.2561,
+      "yearly_swing": 0.1157,
+      "days": 1724
+     },
+     "hold_all_members": {
+      "total_return": 2.0679,
+      "yearly_return": 0.178,
+      "worst_drop": -0.3834,
+      "yearly_swing": 0.2092,
+      "days": 1724
+     },
+     "spy": {
+      "total_return": 1.5625,
+      "yearly_return": 0.1475,
+      "worst_drop": -0.3372,
+      "yearly_swing": 0.2002,
+      "days": 1724
+     }
+    }
+   }
+  }
+ }
+}
