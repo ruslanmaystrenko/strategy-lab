@@ -20,48 +20,21 @@ import pandas as pd
 sys.path.insert(0, "src")
 from emalab.backtest import strategy_returns, summarize, trades  # noqa: E402
 from emalab.signals import ema_crossover  # noqa: E402
+from emalab.universe import DATA, START, load_prices, membership  # noqa: E402
 
-DATA, RESULTS = pathlib.Path("data"), pathlib.Path("results")
-START = "2005-01-03"
+RESULTS = pathlib.Path("results")
 COSTS = {"no cost": 0.0, "0.05% per trade": 0.0005, "0.20% per trade": 0.002}
 MAIN_COST = "0.05% per trade"
 ERAS = {"2005 to 2009": ("2005", "2009"), "2010 to 2019": ("2010", "2019"), "2020 to now": ("2020", "2100")}
 
 
-def membership_mask(days: pd.DatetimeIndex, tickers: list[str], info: dict) -> pd.DataFrame:
-    """True where a stock was in the index on that day."""
-    path = DATA / "membership.csv"
-    if not path.exists():
-        return pd.DataFrame(True, index=days, columns=tickers)
-    history = pd.read_csv(path, parse_dates=["date"]).sort_values("date")
-    mask = pd.DataFrame(False, index=days, columns=tickers)
-    known = set(tickers)
-    edges = list(history["date"]) + [pd.Timestamp("2100-01-01")]
-    for (start, row), end in zip(zip(history["date"], history["tickers"]), edges[1:]):
-        window = (days >= start) & (days < end)
-        if window.any():
-            mask.loc[window, [t for t in row.split(",") if t in known]] = True
-    # The public record stops at its last change date. From there on, use today's list.
-    last = history["date"].max()
-    current = [t for t in info.get("current_members", []) if t in known]
-    if current:
-        mask.loc[days > last, :] = False
-        mask.loc[days > last, current] = True
-    return mask
-
-
 def main() -> None:
     RESULTS.mkdir(exist_ok=True)
-    info = json.loads((DATA / "download.json").read_text())
-    prices = pd.read_parquet(DATA / "prices.parquet")
-    prices["date"] = pd.to_datetime(prices["date"])
-    opens = prices.pivot(index="date", columns="ticker", values="open").sort_index()
-    closes = prices.pivot(index="date", columns="ticker", values="close").sort_index()
-    spy = closes.pop("SPY")
-    opens.pop("SPY")
+    wide, spy, info = load_prices()
+    opens, closes = wide["open"], wide["close"]
     tickers = list(closes.columns)
     days = closes.index[closes.index >= START]
-    member = membership_mask(closes.index, tickers, info).loc[days]
+    member = membership(closes.index, tickers, info).loc[days]
 
     out = {"data": {k: info[k] for k in ("symbols_wanted", "symbols_found", "first_day", "last_day", "has_membership_history")},
            "stocks_tested": 0, "by_cost": {}}
