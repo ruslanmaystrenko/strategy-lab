@@ -53,6 +53,20 @@ Full numbers are in [`results/baseline.json`](results/baseline.json).
 * Every result is shown beside simply holding the same stocks, and beside
   holding the index fund.
 
+## The app
+
+```
+streamlit run app.py
+```
+
+On Windows, double click `Scanner.bat`. It opens in the browser with three views:
+
+* **One stock.** Pick any index member and see its price with every crossover marked, the trades the strategy would have made, and how that compares with holding.
+* **Today's signals.** New golden crosses, crosses back down and momentum leaders across the index.
+* **How the strategies did.** Every tested strategy side by side, for the development years, the final test, or both.
+
+It reports only. It never places trades.
+
 ## Run it
 
 ```
