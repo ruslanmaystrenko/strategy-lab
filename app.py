@@ -74,7 +74,7 @@ strategies, one_stock, signals = st.tabs(["How the strategies did", "One stock",
 
 # ---- how every tested strategy has done
 with strategies:
-    st.markdown("Five strategies, each trading **the whole S&P 500 as one portfolio** that starts with $1. "
+    st.markdown("Five strategies, each trading **the whole S&P 500 as one portfolio** that starts with $1, ranked by total return. "
                 "These results cover every stock in the index, so they do not change with the stock picked on the One stock tab.")
     report = json.load(open("results/strategies_final.json"))
     daily = pd.read_csv("results/strategies_final_daily.csv", index_col=0, parse_dates=True)
@@ -82,11 +82,13 @@ with strategies:
     st.caption("The rules were chosen using 2005 to 2021 only. The years from 2022 were held back and looked at once, as the real test.")
     part = {"All": daily, "Dev": daily.loc[:"2021"], "Fin": daily.loc["2022":]}[period[:3]]
     stats = {name: summarize(part[name]) for name in part}
-    for col, name in zip(st.columns(len(part.columns)), sorted(part, key=lambda n: -stats[n].total_return)):
-        s = stats[name]
-        col.markdown(f"{dot(COLORS[name])} **{name}**", unsafe_allow_html=True, help=RULES[name])
-        col.metric("Total return", f"{s.total_return:+,.0%}", label_visibility="collapsed")
-        col.caption(f"$1 became ${1 + s.total_return:,.2f}  \n{s.yearly_return:.1%} a year  \nWorst drop {s.worst_drop:.0%}")
+    rows = "".join(
+        f"<tr><td>{dot(COLORS[name])}&nbsp; <b>{name}</b><br><span style='color:{GREY};font-size:13px'>{RULES[name]}</span></td>"
+        f"<td style='font-size:26px'>{s.total_return:+,.0%}</td><td>${1 + s.total_return:,.2f}</td><td>{s.yearly_return:.1%}</td><td>{s.worst_drop:.0%}</td></tr>"
+        for name, s in sorted(stats.items(), key=lambda item: -item[1].total_return))
+    st.markdown("<style>.ranks{width:100%;border-collapse:collapse} .ranks td,.ranks th{padding:10px 14px;border-bottom:1px solid #232527;text-align:right;vertical-align:middle;border-left:0;border-right:0}"
+                ".ranks td:first-child,.ranks th:first-child{text-align:left} .ranks th{color:#8d8d90;font-weight:400;font-size:13px}</style>"
+                f"<table class='ranks'><tr><th>Strategy</th><th>Total return</th><th>$1 became</th><th>Per year</th><th>Worst drop</th></tr>{rows}</table>", unsafe_allow_html=True)
 
     st.subheader("Growth of $1")
     fig = go.Figure()
