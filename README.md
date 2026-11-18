@@ -10,24 +10,24 @@ Five strategies, each trading the whole S&P 500 as one portfolio from January 20
 
 | Strategy | Total return | $1 became | Per year | Worst drop |
 | --- | --- | --- | --- | --- |
-| Hold everything | +1,540% | $16.40 | 13.7% | 56% |
-| Momentum | +1,433% | $15.33 | 13.3% | 54% |
+| Hold everything | +1,474% | $15.74 | 13.5% | 57% |
+| Momentum | +1,375% | $14.75 | 13.1% | 54% |
 | SPY, the index fund | +822% | $9.22 | 10.7% | 55% |
-| Market trend filter | +766% | $8.66 | 10.4% | 25% |
-| Golden cross | +399% | $4.99 | 7.6% | 26% |
-| Dip buying | +202% | $3.02 | 5.2% | 40% |
+| Market trend filter | +745% | $8.45 | 10.3% | 25% |
+| Golden cross | +388% | $4.88 | 7.5% | 26% |
+| Dip buying | +198% | $2.98 | 5.1% | 40% |
 
 * **Nothing beat simply holding every stock.** The rules that move in and out of the market dodge part of each crash and then miss the start of each recovery, which costs more.
-* **The golden cross is a way to take less risk, not a way to earn more.** Its worst drop was 26 percent against 56 percent for holding, and it paid for that with a third of the return.
+* **The golden cross is a way to take less risk, not a way to earn more.** Its worst drop was 26 percent against 57 percent for holding, and it paid for that with a third of the return.
 * **The winner on the early years lost on the later ones.** The rules were chosen using 2005 to 2021 only. The market trend filter looked best there, then fell behind on the years held back for the real test. Momentum did the opposite.
 
 | Per year | 2005 to 2021 | 2022 to today |
 | --- | --- | --- |
-| Hold everything | 13.6% | 13.9% |
-| Golden cross | 8.1% | 6.1% |
-| Momentum | 11.4% | 20.3% |
-| Market trend filter | 11.7% | 6.0% |
-| Dip buying | 5.7% | 3.6% |
+| Hold everything | 13.4% | 13.7% |
+| Golden cross | 8.0% | 5.9% |
+| Momentum | 11.2% | 20.0% |
+| Market trend filter | 11.6% | 5.8% |
+| Dip buying | 5.6% | 3.5% |
 | SPY | 10.5% | 11.4% |
 
 * **The original project's model added nothing.** Rebuilt without the leak described in REWORK.md, it could not tell good crossovers from bad ones. The trades it picked made money 37.5 percent of the time and the ones it skipped 37.0 percent.

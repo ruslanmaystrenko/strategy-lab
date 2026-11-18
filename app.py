@@ -126,13 +126,14 @@ with one_stock:
     mine, hold = summarize(view["strategy"]), summarize(view["hold"])
     span_words = f"past {years} years" if years > 1 else "past year"
 
+    st.markdown(f"**Returns over the {span_words}**")
     k = st.columns(5)
-    k[0].metric(f"Return following the cross, {span_words}", f"{mine.total_return:+.0%}", f"{(mine.total_return - hold.total_return) * 100:+.0f} points vs holding")
-    k[1].metric(f"Return holding {ticker}, {span_words}", f"{hold.total_return:+.0%}")
-    k[2].metric("Worst drop following the cross", f"{mine.worst_drop:.0%}")
+    k[0].metric("Following the cross", f"{mine.total_return:+.0%}", f"{(mine.total_return - hold.total_return) * 100:+.0f} points vs holding")
+    k[1].metric(f"Holding {ticker}", f"{hold.total_return:+.0%}")
+    k[2].metric("Worst drop, the cross", f"{mine.worst_drop:.0%}")
     k[2].caption(f"Holding: {hold.worst_drop:.0%}")
     k[3].metric("Trades that made money", f"{(shown['result'] > 0).sum()} of {len(shown)}" if len(shown) else "none")
-    k[4].metric("Right now", "In a golden cross" if above[ticker].iloc[-1] else "Out")
+    k[4].metric("In a golden cross now", "Yes" if above[ticker].iloc[-1] else "No")
 
     st.markdown(f"<span style='color:{JADE}'>&#9650;</span> bought &nbsp; <span style='color:{RED}'>&#9660;</span> sold &nbsp;&nbsp; "
                 f"<span style='background:{JADE}33;padding:1px 8px'>green band</span> the strategy owned the stock and that trade made money &nbsp; "
