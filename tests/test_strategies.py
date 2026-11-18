@@ -27,6 +27,17 @@ def test_trades_at_the_next_open_and_pays_for_what_changed():
     assert out.iloc[3] == pytest.approx(12 / 12 - 1)
 
 
+def test_keeping_equal_shares_costs_money_when_prices_move_apart():
+    days = pd.bdate_range("2020-01-01", periods=4)
+    closes = pd.DataFrame({"A": [10, 10, 20, 20.0], "B": [10, 10, 10, 10.0]}, index=days)   # A doubles during day 2
+    opens = closes.shift(1).fillna(closes)
+    weights = pd.DataFrame(0.5, index=days, columns=["A", "B"])
+    free = portfolio_returns(opens, closes, weights, cost=0)
+    charged = portfolio_returns(opens, closes, weights, cost=0.01)
+    assert charged.iloc[3] < free.iloc[3]                                 # day 3 opens two thirds in A and must sell back to half
+    assert charged.iloc[3] == pytest.approx(-0.01 * 2 * (2 / 3 - 0.5))
+
+
 @pytest.mark.parametrize("name", STRATEGIES)
 def test_every_strategy_is_valid_and_cannot_see_the_future(name):
     opens, closes, member, spy = market()
