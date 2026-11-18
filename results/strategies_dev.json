@@ -1,33 +1,33 @@
 {
  "development 2005 to 2021": {
   "Hold everything": {
-   "yearly_return": 0.1361,
-   "worst_drop": -0.5607,
-   "yearly_swing": 0.2148,
-   "return_per_unit_of_swing": 0.63
+   "yearly_return": 0.134,
+   "worst_drop": -0.5656,
+   "yearly_swing": 0.2147,
+   "return_per_unit_of_swing": 0.62
   },
   "Golden cross": {
-   "yearly_return": 0.0811,
-   "worst_drop": -0.2562,
-   "yearly_swing": 0.1071,
-   "return_per_unit_of_swing": 0.76
+   "yearly_return": 0.0799,
+   "worst_drop": -0.2573,
+   "yearly_swing": 0.107,
+   "return_per_unit_of_swing": 0.75
   },
   "Momentum": {
-   "yearly_return": 0.114,
-   "worst_drop": -0.5394,
-   "yearly_swing": 0.2177,
+   "yearly_return": 0.1123,
+   "worst_drop": -0.5416,
+   "yearly_swing": 0.2176,
    "return_per_unit_of_swing": 0.52
   },
   "Market trend filter": {
-   "yearly_return": 0.117,
-   "worst_drop": -0.2459,
-   "yearly_swing": 0.1333,
-   "return_per_unit_of_swing": 0.88
+   "yearly_return": 0.1158,
+   "worst_drop": -0.2463,
+   "yearly_swing": 0.1332,
+   "return_per_unit_of_swing": 0.87
   },
   "Dip buying": {
-   "yearly_return": 0.0565,
-   "worst_drop": -0.3958,
-   "yearly_swing": 0.1687,
+   "yearly_return": 0.056,
+   "worst_drop": -0.3953,
+   "yearly_swing": 0.1686,
    "return_per_unit_of_swing": 0.33
   },
   "SPY": {
