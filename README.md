@@ -4,6 +4,8 @@ A stock screener and a testing rig that answer one question honestly: if you had
 
 It began as a project on the golden cross, the moment a stock's 50 day average price rises above its 200 day average. The first version reported strong results. Those results did not survive a careful check, so the project was rebuilt from the ground up. [REWORK.md](REWORK.md) explains what was wrong, and the original work is kept untouched in [`original/`](original).
 
+![The screener's main view: every strategy ranked, with what one dollar grew to](docs/strategies.jpg)
+
 ## What it found
 
 Five strategies, each trading the whole S&P 500 as one portfolio from January 2005 to November 2026.
@@ -47,6 +49,8 @@ The download takes about three minutes and is free. On Windows, double click `Sc
 **How the strategies did.** The table above with a chart of what $1 grew to, and a second chart of how far each strategy sat below its own peak. Switch between all years, the development years and the final test.
 
 **One stock.** Pick any stock in the index. The chart marks each point where the golden cross bought and sold. A green band is a trade that made money, a red band is one that lost, and no band means the rule was out of the stock. Tiles above the chart compare following the rule with holding the stock.
+
+![One stock, with every buy and sell marked](docs/one-stock.jpg)
 
 **Today's signals.** Stocks that formed a golden cross in the last ten days, stocks that crossed back down, and the strongest stocks of the past year. Each new cross is shown with how that signal has done on that stock before.
 
